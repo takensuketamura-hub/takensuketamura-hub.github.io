@@ -1,11 +1,91 @@
 <!DOCTYPE html>
 <html lang="ja">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>ハンドルネームのポートフォリオ</title>
-  </head>
-  <body>
-    <h1>ハンドルネーム</h1>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ヴァンサバ風ブラウザゲーム</title>
+
+  <style>
+    /* ====== 全体レイアウト ====== */
+    body {
+      margin: 0;
+      font-family: "Segoe UI", "Hiragino Sans", sans-serif;
+      background: radial-gradient(circle at center, #222 0%, #000 100%);
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    header {
+      text-align: center;
+      padding: 20px 0;
+      font-size: 1.6rem;
+      font-weight: bold;
+      color: #ffd93d;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+      letter-spacing: 0.05em;
+    }
+
+    /* ====== ゲーム画面 ====== */
+    #gameCanvas {
+      background: #111;
+      border: 2px solid #333;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(255, 217, 61, 0.2);
+    }
+
+    /* ====== メニュー・ボタン ====== */
+    .menu {
+      margin-top: 10px;
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+    }
+
+    button {
+      background: linear-gradient(180deg, #ffcc00, #ff9900);
+      border: none;
+      border-radius: 8px;
+      padding: 10px 20px;
+      font-size: 1rem;
+      font-weight: bold;
+      color: #222;
+      cursor: pointer;
+      transition: 0.2s;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    }
+
+    button:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 12px rgba(255,200,50,0.8);
+    }
+
+    footer {
+      position: absolute;
+      bottom: 10px;
+      font-size: 0.9rem;
+      color: #888;
+    }
+  </style>
+</head>
+<body>
+  <header>🧛 ヴァンサバ風 ブラウザサバイバー</header>
+
+  <!-- ゲームキャンバス -->
+  <canvas id="gameCanvas" width="800" height="600"></canvas>
+
+  <div class="menu">
+    <button onclick="startGame('normal')">ノーマルモード</button>
+    <button onclick="startGame('hard')">ハードモード</button>
+    <button onclick="resetGame()">リセット</button>
+  </div>
+
+  <footer>© 2025 My Survival Game | All rights reserved.</footer>
+
+  <!-- ゲームスクリプト -->
+  <script src="game.js"></script>
+</body>
 </html>
