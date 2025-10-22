@@ -1,0 +1,62 @@
+body {
+  background: radial-gradient(circle at center, #111, #000);
+  color: white;
+  font-family: "Segoe UI", sans-serif;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  margin-top: 20px;
+  font-size: 2rem;
+  color: #00ff99;
+  text-shadow: 0 0 10px #0f0;
+}
+
+#menu {
+  margin: 10px auto;
+}
+
+#menu button {
+  margin: 8px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(90deg, #0044ff, #00bbff);
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 0 10px #00bbff;
+  transition: 0.2s;
+}
+
+#menu button:hover {
+  transform: scale(1.1);
+  background: linear-gradient(90deg, #00bbff, #00ffcc);
+}
+
+#controls {
+  margin: 10px auto;
+}
+
+#controls button {
+  margin: 5px;
+  padding: 8px 16px;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: none;
+  background: crimson;
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 0 10px crimson;
+}
+
+canvas {
+  background: #111;
+  display: block;
+  margin: 10px auto;
+  border: 2px solid #333;
+  border-radius: 12px;
+  touch-action: none;
+}
