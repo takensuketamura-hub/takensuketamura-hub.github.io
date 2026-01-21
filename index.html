@@ -1,26 +1,15 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Survivor Game</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <title>Tetris</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>🎮 Survivor Game</h1>
 
-  <div id="menu">
-    <button id="normalBtn">ノーマルモード</button>
-    <button id="hardBtn">ハードモード</button>
-    <p>または Enterキーで開始</p>
-  </div>
+<h1>Tetris</h1>
+<canvas id="game" width="300" height="600"></canvas>
 
-  <canvas id="gameCanvas" width="800" height="600"></canvas>
-
-  <div id="controls">
-    <button id="resetBtn">リセット</button>
-  </div>
-
-  <script src="game.js"></script>
+<script src="main.js"></script>
 </body>
 </html>
